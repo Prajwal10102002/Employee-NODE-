@@ -1,16 +1,23 @@
 {
-    "version":2,
-    "builds":[
-        {
-            "src":"./app.js",
-            "use":"@vercel/node"
-        }
+    "version": 2,
+    "builds": [
+      {
+        "src": "./app.js",
+        "use": "@vercel/node"
+      }
     ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"/"
-        }
+    "routes": [
+      { "src": "/getemployee", "dest": "/app.js" },
+      { "src": "/getemployee/:id", "dest": "/app.js" },
+      { "src": "/update/:id", "dest": "/app.js" },
+      { "src": "/create", "dest": "/app.js" },
+      { "src": "/delete/:id", "dest": "/app.js" },
+      { "src": "/count", "dest": "/app.js" },
+      { "src": "/admincount", "dest": "/app.js" },
+      { "src": "/sum", "dest": "/app.js" },
+      { "src": "/register", "dest": "/app.js" },
+      { "src": "/login", "dest": "/app.js" },
+      { "src": "/(.*)", "dest": "/app.js" }
     ]
-
-}
+  }
+  
